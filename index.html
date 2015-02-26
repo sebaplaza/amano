@@ -11,8 +11,11 @@
         <div ng-controller="PrincipalController">
 
             <div class="pull-right">
-            	<input type="text" class="form-control" ng-model="num" placeholder="How many?">				
-			</div>
+                <input type="text" class="form-control" ng-model="num" placeholder="How many?">
+            </div>
+            <div>
+                <input type="text" class="form-control" ng-model="search" placeholder="Search">
+            </div>
 
             <table ng-show="people.length" class="table table-striped">
                 <thead>
@@ -23,7 +26,7 @@
                     <th>Position</th>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="person in people">
+                    <tr ng-repeat="person in people | filter:search">
                         <td><img src="http://placehold.it/32x32" alt="">
                         </td>
                         <td>{{person.fullName}}</td>
