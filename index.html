@@ -1,0 +1,48 @@
+<html ng-app="app">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div ng-controller="PrincipalController">
+
+            <div class="pull-right">
+            	<input type="text" class="form-control" ng-model="num" placeholder="How many?">				
+			</div>
+
+            <table ng-show="people.length" class="table table-striped">
+                <thead>
+                    <th>Avatar</th>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Overview</th>
+                    <th>Position</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in people">
+                        <td><img src="http://placehold.it/32x32" alt="">
+                        </td>
+                        <td>{{person.fullName}}</td>
+                        <td>{{person.company}}</td>
+                        <td>{{person.overview}}</td>
+                        <td>{{person.position}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/angularjs/angular.js"></script>
+    <script type="text/javascript" src="bower_components/ng-filltext/ng-filltext.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="js/controllers/principal-controller.js"></script>
+    <script type="text/javascript" src="js/services/personas-service.js"></script>
+
+</body>
+
+</html>
