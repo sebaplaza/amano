@@ -1,7 +1,9 @@
-angular.module('services', ['ng-filltext'])
+angular.module('services')
     .factory('Persona', function(filltext, $q) {
 
         return {
+
+        	//We return a promise
             all: function(num) {
 
                 var q = $q.defer();
