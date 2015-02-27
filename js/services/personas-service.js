@@ -3,7 +3,7 @@ angular.module('services')
 
         return {
 
-        	//We return a promise
+        	//We return a promise with $q library
             all: function(num) {
 
                 var q = $q.defer();
