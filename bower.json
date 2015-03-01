@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "angularjs": "~1.3.14",
-    "ng-filltext": "*"
+    "ng-filltext": "*",
+    "ui-router": "~0.2.13"
   }
 }

@@ -1,5 +1,5 @@
 angular.module('services')
-    .factory('Persona', function(filltext, $q) {
+    .factory('PersonaService', function(filltext, $q) {
 
         return {
 

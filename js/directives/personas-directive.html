@@ -1,21 +1,27 @@
-<div ng-show="people.length">
-    <table class="table table-striped">
-        <thead>
-            <th>Avatar</th>
-            <th>Name</th>
-            <th>Company</th>
-            <th>Overview</th>
-            <th>Position</th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="person in allPeople | filter:search">
-                <td><img src="http://placehold.it/32x32" alt="">
-                </td>
-                <td>{{person.fullName}}</td>
-                <td>{{person.company}}</td>
-                <td>{{person.overview}}</td>
-                <td>{{person.position}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div>
+    <div>
+        <input type="text" class="form-control" ng-model="search" placeholder="Search">
+    </div>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <th>Avatar</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Overview</th>
+                <th>Position</th>
+            </thead>
+            <tbody ng-show="people.length">
+                <tr ng-repeat="person in people | filter:search">
+                    <td><img src="http://placehold.it/32x32" alt="">
+                    </td>
+                    <td>{{person.fullName}}</td>
+                    <td>{{person.company}}</td>
+                    <td>{{person.overview}}</td>
+                    <td>{{person.position}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
