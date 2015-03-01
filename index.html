@@ -1,7 +1,7 @@
 <html ng-app="app">
 
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<head>    
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
 </head>
 
@@ -12,8 +12,8 @@
         <a ui-sref="home">Home</a>
         <a ui-sref="about">About</a>
         <a ui-sref="people">People</a>
-        <a ui-sref="people.child">Child</a>
-
+        <a ui-sref="herencias.child">Child</a>
+        <a ui-sref="herencias.child2">Child 2</a>
 
 
         <div ui-view>
@@ -23,13 +23,22 @@
 
     </div>
 
+    <!-- Librerias externas -->
     <script type="text/javascript" src="bower_components/angularjs/angular.js"></script>
     <script type="text/javascript" src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="bower_components/ng-filltext/ng-filltext.js"></script>
+
+    <!-- App y routes -->
     <script src="app.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
+
+    <!-- Controllers -->
     <script type="text/javascript" src="js/controllers/people-controller.js"></script>
-    <script type="text/javascript" src="js/controllers/people-child-controller.js"></script>
+    <script type="text/javascript" src="/js/controllers/herencias-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/herencias-child-controller.js"></script>
+    <script type="text/javascript" src="/js/controllers/herencias-child2-controller.js"></script>
+
+    <!-- Services -->
     <script type="text/javascript" src="js/services/personas-service.js"></script>
     <script type="text/javascript" src="js/directives/personas-directive.js"></script>
 
